@@ -17,6 +17,29 @@
   display: flex;
   gap: 222px;
 }
+.header__burger-btn {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border: none;
+  background-color: aqua;
+  display: none;
+}
+.header__burger-btn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  left: 3px;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+.header__burger-btn span:nth-child(1) {
+  transform: translateY(-15px);
+}
+
+.header__burger-btn span:nth-child(3) {
+  transform: translateY(15px);
+}
 .header-content__logo {
   font-family: Montserrat;
   font-weight: 700;
@@ -41,9 +64,6 @@
 .section_about {
   background-color: #07203f;
   padding: 135px 0px;
-  display: flex;
-  gap: 46px;
-  align-items: center;
 }
 .about-content {
   display: flex;
@@ -111,4 +131,56 @@
   padding-bottom: 150px;
   display: flex;
   gap: 58.5px;
+}
+@media (max-width: 1024px) {
+  .header-content__nav {
+    display: block;
+  }
+  .header-content__logo {
+    font-size: 40px;
+  }
+  .header-content__nav {
+    font-size: 40px;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 157px;
+    gap: 41px;
+  }
+  .about-content__photo-item {
+    width: 540px;
+    height: 540px;
+  }
+  .about-content__button {
+    height: 128px;
+  }
+}
+@media (max-width: 360px) {
+  .header.open.header__burger-btn span: .header-content__logo {
+    font-size: 24px;
+  }
+  .header__burger-btn {
+    display: block;
+    z-index: 2;
+  }
+  .header-content__nav {
+    position: absolute;
+    left: -370px;
+    top: 0px;
+    background-color: bisque;
+    padding: 75px 20px 20px 20px;
+    width: 350px;
+    transition: transform 0.5s;
+  }
+  .header-content__nav-item {
+    color: white;
+    display: block;
+    padding: 10px 0px;
+  }
+  header.open .header-content__nav {
+    transform: translateX(100%);
+  }
 }

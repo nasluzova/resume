@@ -28,7 +28,6 @@
   display: flex;
   justify-content: center;
   gap: 40px;
-
   color: #ffffff;
 }
 
@@ -38,7 +37,6 @@
 .section {
   display: flex;
   gap: 46px;
-  justify-content: center;
 }
 .section_about {
   background-color: #07203f;
@@ -48,6 +46,7 @@
   display: flex;
   gap: 46px;
   flex-direction: row;
+  justify-content: space-between;
 }
 .about-content__description {
   padding-top: 25px;
@@ -112,14 +111,25 @@
   gap: 58.5px;
 }
 @media (max-width: 1024px) {
+  .header {
+    height: 342px;
+    gap: 123px;
+  }
+  .container {
+    padding: 59px 101.86px;
+  }
   .header-content__nav {
     display: block;
+    justify-content: space-between;
+    font-size: 40px;
+    text-align: right;
   }
   .header-content__logo {
     font-size: 40px;
+    padding: 1.14px;
   }
-  .header-content__nav {
-    font-size: 40px;
+  .header-content__nav-item {
+    margin-bottom: 40px;
   }
   .about-content {
     display: flex;

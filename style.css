@@ -116,7 +116,7 @@
     gap: 123px;
   }
   .container {
-    padding: 59px 101.86px;
+    padding: 22px 101.86px;
   }
   .header-content__nav {
     display: block;
@@ -131,13 +131,27 @@
   .header-content__nav-item {
     margin-bottom: 40px;
   }
+
   .about-content {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    padding: 157px;
     gap: 41px;
+  }
+  .about-content__description {
+    padding-top: 19px;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-content__heading {
+    height: 78px;
+    margin-bottom: 41px;
+  }
+  .about-content__info {
+    height: 216px;
+    justify-content: center;
+    text-align: center;
   }
   .about-content__photo-item {
     width: 540px;
